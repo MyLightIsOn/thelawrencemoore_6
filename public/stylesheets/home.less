@@ -1,5 +1,56 @@
+@import "variables.less";
+
 #main-title {
-    margin: 10% auto 0;
+    margin: 0 auto;
+    padding: 10%;
 
     text-align: center;
+}
+
+#bottom-nav {
+    position: absolute;
+    bottom: 0;
+
+    height: 60%;
+    width: 100%;
+
+    background-color: #009900;
+
+    .nav-area {
+        position: absolute;
+
+        width: 50%;
+        height: 50%;
+        border: 4px solid #fff;
+
+        cursor: pointer;
+    }
+
+    .about {
+        top: 0;
+        left: 0;
+    }
+
+    .design {
+        top: 0;
+        right: 0;
+    }
+
+    .code {
+        bottom: 0;
+        left: 0;
+    }
+
+    .contact {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media @mobile-landscape {
+
+    #main-title {
+        margin: 0 auto;
+        padding-top: 3%;
+    }
 }
