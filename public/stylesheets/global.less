@@ -1,0 +1,46 @@
+/*
+How CSS is grouped
+
+Position
+Box Model
+Color
+Text
+*/
+
+@import "variables.less";
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+
+    background-color: @black;
+    color: @white;
+}
+
+.main-container {
+
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    /*background-color: red;*/
+}
+
+h1 {
+    font-family: @sans-source;
+}
+
+h3 {
+    font-family: @sanchez;
+}
+

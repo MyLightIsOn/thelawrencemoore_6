@@ -1,5 +1,5 @@
-var myDiv = document.getElementsByClassName('myDiv');
+var myDiv = document.getElementsByClassName('main-container');
 
 myDiv[0].addEventListener('click', function(){
-    Velocity(myDiv[0], { left: 500 })
+    Velocity(myDiv[0], { left: 900 })
 });
