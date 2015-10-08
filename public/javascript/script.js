@@ -18,14 +18,27 @@ var myApp = {
 
         for(i = 0; i < navArray.length; ++i){
             navArray[i].addEventListener('click', function(){
-                myApp.openNav(this);
+                myApp.openNav(this, navArray);
             });
         }
     },
 
     //Function for opening the nav
-    openNav: function(navElements){
-        console.log(navElements)
+    openNav: function(navButton, navArray){
+        var bottomNav = document.getElementById('bottom-nav');
+
+        Velocity(bottomNav, {height: 100 + '%'});
+
+        for(i = 0; i < navArray.length; ++i){
+            if(navArray[i] == navButton){
+                Velocity(navButton, {
+                    width: 100 + '%',
+                    height: 100 + '%'
+                });
+            } else {
+                Velocity(navArray[i], { left: -900 })
+            }
+        }
     }
 };
 
