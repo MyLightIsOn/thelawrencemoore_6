@@ -13,6 +13,7 @@ Text
     box-sizing: inherit;
     padding: 0;
     margin: 0;
+    z-index: 5;
 }
 
 html {
@@ -52,12 +53,25 @@ h3 {
 }
 
 .bg-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     
     height: 100%;
+    width: 100%;
+
+    z-index: 0;
 }
 
+.video-overlay {
+    position: fixed;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: url('../assets/images/small-dots.png') repeat;
+    z-index: 1;
+}
 
 @media @mobile-landscape {
     h1 {
