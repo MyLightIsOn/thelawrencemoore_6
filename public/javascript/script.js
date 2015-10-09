@@ -2,7 +2,30 @@ var myApp = {
 
     //Initializes script
     init: function(){
+        myApp.introAnimation();
         myApp.navOpenEventListener();
+    },
+
+    introAnimation: function(){
+         var bottomNav = document.getElementById('bottom-nav'),
+             navItems = bottomNav.children,
+             easing =  [ 0.17, 0.67, 0.40, 0.67 ];
+
+        setTimeout(function(){
+            Velocity(navItems[0], {top: 0, bottom: null}, easing)
+        },250);
+
+        setTimeout(function(){
+            Velocity(navItems[1], {top: 0, bottom: null}, easing)
+        },450);
+
+        setTimeout(function(){
+            Velocity(navItems[2], {bottom: 0}, easing)
+        },650);
+
+        setTimeout(function(){
+            Velocity(navItems[3], {bottom: 0}, easing)
+        },850);
     },
 
     //Puts nav buttons into an array
@@ -65,10 +88,10 @@ var myApp = {
             navItems = bottomNav.children;
 
         Velocity(bottomNav, {height: 60 + '%'});
-        Velocity(navItems[1], {left: 50 + '%', width: 50 + '%', height: 50 + '%'});
-        Velocity(navItems[3], {left: 50 + '%', width: 50 + '%', height: 50 + '%'});
-        Velocity(navItems[0], {left: 0, width: 50 + '%', height: 50 + '%'});
-        Velocity(navItems[2], {left: 0, width: 50 + '%', height: 50 + '%'});
+        Velocity(navItems[1], {left: 50 + '%', width: 50 + '%', height: 50 + '%'}); // Design
+        Velocity(navItems[3], {left: 50 + '%', width: 50 + '%', height: 50 + '%'}); // Contact
+        Velocity(navItems[0], {left: 0, width: 50 + '%', height: 50 + '%'});        // About
+        Velocity(navItems[2], {left: 0, width: 50 + '%', height: 50 + '%'});        // Code
 
         for(var i = 0; i < navItems.length; ++i) {
             Velocity(navItems[i].children, {
