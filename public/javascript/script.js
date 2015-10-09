@@ -9,23 +9,28 @@ var myApp = {
     introAnimation: function(){
          var bottomNav = document.getElementById('bottom-nav'),
              navItems = bottomNav.children,
+             titleElements = document.getElementById('main-title').children,
              easing =  [ 0.17, 0.67, 0.40, 0.67 ];
 
-        setTimeout(function(){
-            Velocity(navItems[0], {top: 0, bottom: null}, easing)
-        },250);
+        Velocity(titleElements, {opacity: 1}, {duration: 1000}).then(function(){
+            setTimeout(function(){
+                Velocity(navItems[0], {top: 0, bottom: null}, easing)
+            },250);
 
-        setTimeout(function(){
-            Velocity(navItems[1], {top: 0, bottom: null}, easing)
-        },450);
+            setTimeout(function(){
+                Velocity(navItems[1], {top: 0, bottom: null}, easing)
+            },450);
 
-        setTimeout(function(){
-            Velocity(navItems[2], {bottom: 0}, easing)
-        },650);
+            setTimeout(function(){
+                Velocity(navItems[2], {bottom: 0}, easing)
+            },650);
 
-        setTimeout(function(){
-            Velocity(navItems[3], {bottom: 0}, easing)
-        },850);
+            setTimeout(function(){
+                Velocity(navItems[3], {bottom: 0}, easing)
+            },850);
+        });
+
+
     },
 
     //Puts nav buttons into an array
