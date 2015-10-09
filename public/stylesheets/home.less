@@ -37,8 +37,6 @@
             border-radius: 200px;
 
             background-color: @white;
-
-            opacity: 0.2;
         }
 
         span {
@@ -53,23 +51,43 @@
     }
 
     .about {
-        /*top: 0;*/
+
         left: 0;
+
+        .opaque-element {
+            background: url(../assets/images/about_small.jpg) no-repeat;
+            background-size: cover;
+        }
     }
 
     .design {
-        /*top: 0;*/
+
         right: 0;
+
+        .opaque-element {
+            background: url(../assets/images/design_small.jpg) no-repeat;
+            background-size: cover;
+        }
     }
 
     .code {
-        /*bottom: 0;*/
+
         left: 0;
+
+        .opaque-element {
+            background: url(../assets/images/code_small.jpg) no-repeat;
+            background-size: cover;
+        }
     }
 
     .contact {
-        /*bottom: 0;*/
+
         right: 0;
+
+        .opaque-element {
+            background: url(../assets/images/contact_small.jpg) no-repeat;
+            background-size: cover;
+        }
     }
 }
 
