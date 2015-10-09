@@ -26,13 +26,15 @@
 
         width: 50%;
         height: 50%;
-        border: 4px solid #fff;
 
         cursor: pointer;
 
         .opaque-element {
-            width: 100%;
-            height: 100%;
+            width: 60%;
+            height: 60%;
+
+            margin: auto;
+            border-radius: 200px;
 
             background-color: @white;
 
@@ -40,11 +42,13 @@
         }
 
         span {
-            position: absolute;
-            top: 0;
-            
-            font-size: 1em;
-            /*display: none;*/
+            width: 100%;
+            display: block;
+            margin: auto;
+
+            font-family: @sans-source;
+            font-size: 4.5em;
+            text-align: center;
         }
     }
 
@@ -86,5 +90,28 @@
     #main-title {
         margin: 0 auto;
         padding-top: 3%;
+    }
+
+
+    #bottom-nav {
+
+        .nav-area {
+
+            .opaque-element {
+                width: 50%;
+                height: 50%;
+
+                margin: auto;
+                border-radius: 200px;
+
+                background-color: @white;
+
+                opacity: 0.2;
+            }
+
+            span {
+                font-size: 2em;
+            }
+        }
     }
 }

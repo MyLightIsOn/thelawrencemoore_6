@@ -30,7 +30,6 @@ var myApp = {
             },850);
         });
 
-
     },
 
     //Puts nav buttons into an array
