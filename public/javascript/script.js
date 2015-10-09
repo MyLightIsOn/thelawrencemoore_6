@@ -11,11 +11,6 @@ var myApp = {
         return navArray
     },
 
-    getOpenNavElements: function(){
-        var navAfterClick = document.getElementsByClassName('nav-open');
-        return navAfterClick;
-    },
-
     //Adds opening event listeners to the nav array
     navOpenEventListener: function(){
         var navArray = myApp.getNavElements(),
@@ -29,16 +24,17 @@ var myApp = {
     },
 
     //Adds closing event listeners to the nav array
-    navCloseEventListener: function(activeNav){
+    navCloseEventListener: function(){
         var closeButton = document.getElementsByClassName('close-area');
 
         closeButton[0].addEventListener('click', function(){
-            myApp.closeNav(activeNav)
+            myApp.closeNav();
         });
     },
 
     //Function for opening the nav
     openNav: function(navButton, navArray, bottomNav){
+         var opaqueBackground = navButton.children;
 
         Velocity(bottomNav, {height: 100 + '%'});
 
@@ -51,34 +47,36 @@ var myApp = {
                     height: 100 + '%',
                     left: 0
                 });
+
+                Velocity(opaqueBackground, {
+                    opacity: 1
+                })
             } else {
                 Velocity(navArray[i], { left: -900 })
             }
         }
 
-        myApp.navCloseEventListener(myApp.getOpenNavElements());
+        myApp.navCloseEventListener();
     },
 
-    closeNav: function(activeNav){
+    //Closes all the navigation and returns the user to the 'Home' screen
+    closeNav: function(){
         var bottomNav = document.getElementById('bottom-nav'),
-            designNav = document.getElementsByClassName('design'),
-            contactNav = document.getElementsByClassName('contact'),
-            aboutNav = document.getElementsByClassName('about'),
-            codeNav = document.getElementsByClassName('code');
+            navItems = bottomNav.children;
 
         Velocity(bottomNav, {height: 60 + '%'});
-        Velocity(designNav, {left: 50 + '%', width: 50 + '%', height: 50 + '%',});
-        Velocity(contactNav, {left: 50 + '%', width: 50 + '%', height: 50 + '%',});
-        Velocity(aboutNav, {left: 0, width: 50 + '%', height: 50 + '%',});
-        Velocity(codeNav, {left: 0, width: 50 + '%', height: 50 + '%',});
+        Velocity(navItems[1], {left: 50 + '%', width: 50 + '%', height: 50 + '%'});
+        Velocity(navItems[3], {left: 50 + '%', width: 50 + '%', height: 50 + '%'});
+        Velocity(navItems[0], {left: 0, width: 50 + '%', height: 50 + '%'});
+        Velocity(navItems[2], {left: 0, width: 50 + '%', height: 50 + '%'});
 
-        for(var i = 0; i < activeNav.length; ++i) {
-            /*activeNav[i].className = activeNav[i].className + ' nav-open';*/
+        for(var i = 0; i < navItems.length; ++i) {
+            Velocity(navItems[i].children, {
+                opacity: 0.2
+            });
 
-
+            navItems[i].className = navItems[i].className.replace(/\bnav-open\b/,'')
         }
-
-
     }
 };
 
