@@ -76,7 +76,10 @@ var myApp = {
                 });
 
                 Velocity(opaqueBackground, {
-                    opacity: 1
+                    width: 100 + '%',
+                    height: 100 + '%',
+                    borderRadius: 0,
+                    borderWidth: 0
                 })
             } else {
                 Velocity(navArray[i], { left: -900 })
@@ -99,7 +102,10 @@ var myApp = {
 
         for(var i = 0; i < navItems.length; ++i) {
             Velocity(navItems[i].children, {
-                opacity: 0.2
+                width: 60 + '%',
+                height: 60 + '%',
+                borderRadius: 200 + 'px',
+                borderWidth: 6
             });
 
             navItems[i].className = navItems[i].className.replace(/\bnav-open\b/,'')
