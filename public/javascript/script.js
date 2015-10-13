@@ -73,14 +73,14 @@ var myApp = {
                     width: 100 + '%',
                     height: 100 + '%',
                     left: 0
-                });
+                }, 600);
 
                 Velocity(opaqueBackground, {
                     width: 100 + '%',
                     height: 100 + '%',
                     borderRadius: 0,
                     borderWidth: 0
-                })
+                },  600)
             } else {
                 Velocity(navArray[i], { left: -900 })
             }
