@@ -107,6 +107,9 @@ var myApp = {
             navItems = bottomNav.children,
             closeButton = document.getElementsByClassName('close-area');
 
+        //Closes section
+        myApp.sectionClose();
+
         //Fades out close
         Velocity(closeButton, {opacity: 0});
 
@@ -148,6 +151,19 @@ var myApp = {
                 Velocity(activeSection, {opacity: 1});
                 mainContainer[0].className += ' main-container-open';
             }, 700)
+    },
+
+    //Function that will close the selected content
+    sectionClose: function(){
+        var activeSection = document.getElementsByClassName('active-section'),
+            mainContainer = document.getElementsByClassName('main-container');
+
+        //Fades out content
+        Velocity(activeSection, {opacity: 0});
+
+        //Removes active-section class, thus lowering it's z-index
+        activeSection[0].className = 'inner-content';
+        mainContainer[0].className = ' main-container';
     }
 };
 
