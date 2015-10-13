@@ -6,12 +6,14 @@ var myApp = {
         myApp.navOpenEventListener();
     },
 
+    //Makes the animation when the page loads
     introAnimation: function(){
          var bottomNav = document.getElementById('bottom-nav'),
              navItems = bottomNav.children,
              titleElements = document.getElementById('main-title').children,
              easing =  [ 0.17, 0.67, 0.40, 0.67 ];
 
+        //Animates each nave button
         Velocity(titleElements, {opacity: 1}, {duration: 1000}).then(function(){
             setTimeout(function(){
                 Velocity(navItems[0], {top: 0, bottom: null}, easing)
@@ -61,12 +63,21 @@ var myApp = {
 
     //Function for opening the nav
     openNav: function(navButton, navArray, bottomNav){
-         var opaqueBackground = navButton.children;
+         var opaqueBackground = navButton.children,
+             closeButton = document.getElementsByClassName('close-area');
 
-        Velocity(bottomNav, {height: 100 + '%'});
+        //Adds class to make close button visible
+        closeButton[0].className += ' close-active';
 
+        //Fades in close button
+        Velocity(bottomNav, {height: 100 + '%'}).then(function(){
+            Velocity(closeButton, {opacity: 1})
+        });
+
+        //Finds the nav button that was pressed and expands it
+        //while closing the rest
         for(var i = 0; i < navArray.length; ++i){
-            navArray[i].className = navArray[i].className + ' nav-open';
+            navArray[i].className += ' nav-open';
 
             if(navArray[i] == navButton){
                 Velocity(navButton, {
@@ -92,8 +103,13 @@ var myApp = {
     //Closes all the navigation and returns the user to the 'Home' screen
     closeNav: function(){
         var bottomNav = document.getElementById('bottom-nav'),
-            navItems = bottomNav.children;
+            navItems = bottomNav.children,
+            closeButton = document.getElementsByClassName('close-area');
 
+        //Fades out close
+        Velocity(closeButton, {opacity: 0});
+
+        //Shrinks nav area and returns nav buttons
         Velocity(bottomNav, {height: 60 + '%'});
         Velocity(navItems[1], {left: 50 + '%', width: 50 + '%', height: 50 + '%'}); // Design
         Velocity(navItems[3], {left: 50 + '%', width: 50 + '%', height: 50 + '%'}); // Contact
@@ -108,8 +124,12 @@ var myApp = {
                 borderWidth: 6
             });
 
+            //Removes the nav-open class
             navItems[i].className = navItems[i].className.replace(/\bnav-open\b/,'')
         }
+
+        //Removes the close area class
+        closeButton[0].className = 'close-area';
     }
 };
 

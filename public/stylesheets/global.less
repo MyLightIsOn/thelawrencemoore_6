@@ -5,6 +5,7 @@ Position
 Box Model
 Color
 Text
+Other
 */
 
 @import "variables.less";
@@ -71,6 +72,31 @@ h3 {
 
     background: url('../assets/images/scan-lines.png') repeat;
     z-index: 1;
+}
+
+.close-area {
+    position: fixed;
+    bottom: 35px;
+    left: 5%;
+
+    width: 40%;
+    padding: 20px 40px;
+    display: block;
+    border-radius: 70px;
+
+    text-align: center;
+    font-size: 4em;
+    font-family: @sans-source;
+    color: #000;
+
+    cursor: pointer;
+    background-color: #C0C0C0;
+    opacity: 0;
+    z-index: -10;
+}
+
+.close-area.close-active {
+    z-index: 10;
 }
 
 @media @mobile-landscape {
