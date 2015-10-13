@@ -98,6 +98,7 @@ var myApp = {
         }
 
         myApp.navCloseEventListener();
+        myApp.sectionOpen(navButton);
     },
 
     //Closes all the navigation and returns the user to the 'Home' screen
@@ -130,6 +131,23 @@ var myApp = {
 
         //Removes the close area class
         closeButton[0].className = 'close-area';
+    },
+
+    //Function that displays selected section content
+    sectionOpen: function(navButton){
+        var buttonClassArray = navButton.className.split(' '),
+            activeSectionClassName = buttonClassArray[1] + '-section',
+            activeSection = document.getElementById(activeSectionClassName),
+            mainContainer = document.getElementsByClassName('main-container');
+
+            //Adds active-section class to selected section
+            activeSection.className += ' active-section';
+
+            //Delays content fade in
+            setTimeout(function(){
+                Velocity(activeSection, {opacity: 1});
+                mainContainer[0].className += ' main-container-open';
+            }, 700)
     }
 };
 

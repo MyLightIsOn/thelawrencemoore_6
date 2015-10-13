@@ -42,6 +42,10 @@ body {
     overflow: hidden;
 }
 
+.main-container-open {
+    overflow: visible;
+}
+
 #main-background {
     position: fixed;
     top: 0;
@@ -51,7 +55,7 @@ body {
 
     background: url('../assets/images/orbit_small.jpg') no-repeat;
     background-size: cover;
-    z-index: 1;
+    z-index: 0;
 }
 
 h1 {
@@ -110,21 +114,6 @@ h3 {
     z-index: 10;
 }
 
-.section-quote {
-
-}
-
-.section-quote-author {
-    font-size: 2em;
-}
-
-.inner-content {
-    z-index: -15;
-
-    p {
-        font-size: 4em;
-    }
-}
 
 @media @mobile-landscape {
     h1 {
