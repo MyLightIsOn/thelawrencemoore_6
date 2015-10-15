@@ -155,14 +155,18 @@ var myApp = {
 
     //Function that will close the selected content
     sectionClose: function(){
-        var activeSection = document.getElementsByClassName('active-section'),
+        var activeSection = document.getElementsByClassName('inner-content'),
             mainContainer = document.getElementsByClassName('main-container');
+
 
         //Fades out content
         Velocity(activeSection, {opacity: 0});
 
-        //Removes active-section class, thus lowering it's z-index
-        activeSection[0].className = 'inner-content';
+        //Removes active-section class, thus lowering it's z-index. The delay prevents an undefined error
+        for(var i = 0; i < activeSection.length; ++i){
+            activeSection[i].className = 'inner-content';
+        }
+
         mainContainer[0].className = ' main-container';
     }
 };

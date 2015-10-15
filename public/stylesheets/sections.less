@@ -5,20 +5,26 @@
 }
 
 .gradient {
-    height: 300px
+    height: 300px;
+    margin-top: -300px;
 }
 
 .section-quote {
-
+     text-shadow: @shadow-text;
 }
 
 .section-quote-author {
-    font-size: 2em;
+    font-size: 4em;
+    font-family: @sanchez;
+    text-align: right;
+    text-shadow: @shadow-text
 }
 
 .section-content {
     padding: 5%;
     margin-top: -10px;
+
+    font-family: @sans-source;
 }
 
 .inner-content {
@@ -29,6 +35,10 @@
 
     z-index: -15;
     opacity: 0;
+
+    header {
+        padding: 5%;
+    }
 
     p {
         font-size: 4em;
