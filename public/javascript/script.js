@@ -125,7 +125,7 @@ var myApp = {
                 width: 60 + '%',
                 height: 60 + '%',
                 borderRadius: 200 + 'px',
-                borderWidth: 6
+                borderWidth: 4
             });
 
             //Removes the nav-open class
