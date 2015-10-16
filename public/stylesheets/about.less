@@ -2,6 +2,53 @@
 
 #about-section {
 
+    .section-content {
+        background-color: @gold;
+    }
+
+    .who-I-am {
+        width: 100%;
+        padding-bottom: 50px;
+
+        td {
+            width: 100%;
+        }
+    }
+
+    .light-bulb {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding-left: 80px;
+        margin-bottom: 22px;
+
+        font-size: 1.2em;
+    }
+
+    .light-on:before {
+        position: absolute;
+        left: 23px;
+
+        display: block;
+        width: 63px;
+        height: 50px;
+
+        content: '';
+        background: url(../assets/images/icons.png) -23px -274px no-repeat;
+    }
+
+    .light-off:before {
+        position: absolute;
+        left: 23px;
+
+        display: block;
+        width: 63px;
+        height: 50px;
+
+        content: '';
+        background: url(../assets/images/icons.png) -110px -274px no-repeat;
+    }
+
     .gradient {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#db7f24+0,db7f24+100&amp;0+0,1+100 */
         /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -15,7 +62,5 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00db7f24', endColorstr='#db7f24',GradientType=0 ); /* IE6-8 */
     }
 
-    .section-content {
-        background-color: @gold;
-    }
+
 }
