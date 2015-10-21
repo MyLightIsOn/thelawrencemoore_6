@@ -4,6 +4,8 @@ var myApp = {
     init: function(){
         myApp.introAnimation();
         myApp.navOpenEventListener();
+        myApp.createSlideShow();
+        myApp.slideShowOpenEventListner();
     },
 
     //Makes the animation when the page loads
@@ -168,6 +170,44 @@ var myApp = {
         }
 
         mainContainer[0].className = ' main-container';
+    },
+
+    //Creates the slide shows for the Design page
+    createSlideShow: function(){
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
+        });
+    },
+
+    //Puts nav buttons into an array
+    getProcessButtons: function(){
+        var viewProcessArray = document.getElementsByClassName('view-process');
+        return viewProcessArray
+    },
+
+    //Adds opening event listeners to the nav array
+    slideShowOpenEventListner: function(){
+        var viewProcessArray = myApp.getProcessButtons();
+
+        for(var i = 0; i < viewProcessArray.length; ++i){
+            viewProcessArray[i].addEventListener('click', function(){
+                myApp.openSlideShow(this)
+            });
+        }
+    },
+
+    openSlideShow: function(buttonClicked){
+        var slideShow = buttonClicked.nextElementSibling;
+
+        Velocity(slideShow, {
+            width: 100 + '%',
+            height: 100 + '%',
+            top: 0,
+            left: 0
+        })
     }
 };
 
