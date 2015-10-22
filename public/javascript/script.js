@@ -200,16 +200,22 @@ var myApp = {
     },
 
     openSlideShow: function(buttonClicked){
-        var slideShow = buttonClicked.nextElementSibling;
+        var slideShow = buttonClicked.nextElementSibling,
+            closeButton = document.getElementsByClassName('close-area'),
+            closeSlides = document.getElementsByClassName('close-slide');
 
         Velocity(slideShow, {
-            width: 100 + '%',
-            height: 100 + '%',
-            top: 0,
             left: 0
-        })
+        });
+
+        Velocity(closeButton, {
+            left: -100 + '%'
+        });
+
+        Velocity(closeSlides, {
+            right: 11
+        });
     }
 };
-
 
 myApp.init();
