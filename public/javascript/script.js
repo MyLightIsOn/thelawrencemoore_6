@@ -144,7 +144,9 @@ var myApp = {
         var buttonClassArray = navButton.className.split(' '),
             activeSectionClassName = buttonClassArray[1] + '-section',
             activeSection = document.getElementById(activeSectionClassName),
-            mainContainer = document.getElementsByClassName('main-container');
+            mainContainer = document.getElementsByClassName('main-container'),
+            videoOverlay = document.getElementsByClassName('video-overlay'),
+            mainBackground = document.getElementById('main-background');
 
             //Adds active-section class to selected section
             activeSection.className += ' active-section';
@@ -153,14 +155,21 @@ var myApp = {
             setTimeout(function(){
                 Velocity(activeSection, {opacity: 1});
                 mainContainer[0].className += ' main-container-open';
+                videoOverlay[0].style.display = "none";
+                mainBackground.style.display = "none";
             }, 700)
     },
 
     //Function that will close the selected content
     sectionClose: function(){
         var activeSection = document.getElementsByClassName('inner-content'),
-            mainContainer = document.getElementsByClassName('main-container');
+            mainContainer = document.getElementsByClassName('main-container'),
+            videoOverlay = document.getElementsByClassName('video-overlay'),
+            mainBackground = document.getElementById('main-background');
 
+
+        videoOverlay[0].style.display = "block";
+        mainBackground.style.display = "block";
 
         //Fades out content
         Velocity(activeSection, {opacity: 0});
