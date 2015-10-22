@@ -6,6 +6,7 @@ var myApp = {
         myApp.navOpenEventListener();
         myApp.createSlideShow();
         myApp.slideShowOpenEventListner();
+        myApp.slideShowCloseEventListner();
     },
 
     //Makes the animation when the page loads
@@ -182,19 +183,36 @@ var myApp = {
         });
     },
 
-    //Puts nav buttons into an array
+    //Puts view process buttons into an array
     getProcessButtons: function(){
         var viewProcessArray = document.getElementsByClassName('view-process');
         return viewProcessArray
     },
 
-    //Adds opening event listeners to the nav array
+    //Puts nav buttons into an array
+    getCloseButtons: function(){
+        var closeSlideArray = document.getElementsByClassName('close-slide');
+        return closeSlideArray
+    },
+
+    //Adds opening event listeners to the view button array
     slideShowOpenEventListner: function(){
         var viewProcessArray = myApp.getProcessButtons();
 
         for(var i = 0; i < viewProcessArray.length; ++i){
             viewProcessArray[i].addEventListener('click', function(){
                 myApp.openSlideShow(this)
+            });
+        }
+    },
+
+    //Adds closing event listeners to the close slideshow array
+    slideShowCloseEventListner: function(){
+        var closeSlideArray = myApp.getCloseButtons();
+
+        for(var i = 0; i < closeSlideArray.length; ++i){
+            closeSlideArray[i].addEventListener('click', function(){
+                myApp.closeSlideShow()
             });
         }
     },
@@ -214,6 +232,24 @@ var myApp = {
 
         Velocity(closeSlides, {
             right: 11
+        });
+    },
+
+    closeSlideShow: function(){
+        var slideShow = document.getElementsByClassName('slide-show'),
+            closeButton = document.getElementsByClassName('close-area'),
+            closeSlides = document.getElementsByClassName('close-slide');
+
+        Velocity(closeSlides, {
+            right: 100 + '%'
+        });
+
+        Velocity(slideShow, {
+            left: -100 + '%'
+        });
+
+        Velocity(closeButton, {
+            left: 30 + '%'
         });
     }
 };
