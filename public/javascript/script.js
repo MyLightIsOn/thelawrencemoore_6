@@ -81,14 +81,14 @@ var myApp = {
     //Function for opening the nav
     openNav: function(navButton, navArray, bottomNav){
          var opaqueBackground = navButton.children,
-             closeButton = document.getElementsByClassName('close-area');
+             header = document.getElementsByClassName('header');
 
         //Adds class to make close button visible
-        closeButton[0].className += ' close-active';
+        header[0].className += ' close-active';
 
         //Fades in close button
         Velocity(bottomNav, {height: 100 + '%'}).then(function(){
-            Velocity(closeButton, {opacity: 1})
+            Velocity(header, {opacity: 1})
         });
 
         //Finds the nav button that was pressed and expands it
@@ -122,13 +122,13 @@ var myApp = {
     closeNav: function(){
         var bottomNav = document.getElementById('bottom-nav'),
             navItems = bottomNav.children,
-            closeButton = document.getElementsByClassName('close-area');
+            header = document.getElementsByClassName('header');
 
         //Closes section
         myApp.sectionClose();
 
         //Fades out close
-        Velocity(closeButton, {opacity: 0});
+        Velocity(header, {opacity: 0});
 
         //Shrinks nav area and returns nav buttons
         Velocity(bottomNav, {height: 60 + '%'});
@@ -150,7 +150,7 @@ var myApp = {
         }
 
         //Removes the close area class
-        closeButton[0].className = 'close-area';
+        header[0].className = 'header';
     },
 
     //Function that displays selected section content
