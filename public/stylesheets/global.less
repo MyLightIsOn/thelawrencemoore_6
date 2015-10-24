@@ -68,6 +68,24 @@ h3 {
     font-size: 0.95em;
 }
 
+.header {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    z-index: 10;
+
+    h1 {
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 0.75em;
+    }
+}
+
 .bg-video {
     position: fixed;
     top: 0;
@@ -91,7 +109,7 @@ h3 {
 }
 
 .close-area {
-    position: fixed;
+    position: absolute;
     bottom: 13px;
     left: 30px;
 
@@ -148,10 +166,14 @@ h3 {
 
 @media @mobile-landscape {
     h1 {
+        margin: 10px 0 0 30px;
+
         font-size: 3em;
     }
 
-    h2 {
+    h3 {
+        margin-left: 30px;
+
         font-size: 2em;
     }
 
@@ -160,20 +182,29 @@ h3 {
         bottom: 10px;
 
         width: 25%;
-        padding: 10px 0px;
+        padding: 10px 0;
 
         font-size: 1em;
     }
 }
 
 @media @wide {
+    .header {
+        top: 0;
+        bottom: inherit;
+
+        height: 60px;
+
+        background: url('../assets/images/header_bg.png') repeat;
+    }
+
     .close-area {
         top: 10px;
         right: 50px;
-        bottom: inherit;
-        left: inherit;
+        bottom: auto;
+        left: auto;
 
         width: 180px;
-        padding: 20px 0;
+        padding: 8px 0;
     }
 }
