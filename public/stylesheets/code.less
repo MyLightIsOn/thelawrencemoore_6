@@ -16,6 +16,12 @@
         font-weight: bold;
         color: @white;
         text-decoration: none;
+
+        cursor: pointer;
+    }
+
+    .view-code:hover {
+        background-color: @green * 2;
     }
 
     .the-lawrence-moore {
@@ -66,5 +72,61 @@
 
     .section-content {
         background-color: @blue;
+    }
+}
+
+@media @wide {
+
+    #code-section {
+
+        .project-section {
+
+            div {
+                width: 70%;
+
+                float: left;
+            }
+
+            .view-code {
+                float: left;
+                margin-right: 30px;
+            }
+        }
+
+        .the-lawrence-moore {
+            background: url('../assets/images/sites.jpg') no-repeat -0px 0;
+            background-size: 820px;
+            border: 7px solid @blue * 2;
+        }
+
+        .krates {
+            background: url('../assets/images/sites.jpg') no-repeat -164px 0;
+            background-size: 820px;
+            border: 7px solid @blue * 2;
+        }
+
+        .foxworthy {
+            background: url('../assets/images/sites.jpg') no-repeat -492px 0;
+            background-size: 820px;
+            border: 7px solid @blue * 2;
+        }
+
+        .revolt {
+            background: url('../assets/images/sites.jpg') no-repeat  -492px -163px;
+            background-size: 820px;
+            border: 7px solid @blue * 2;
+        }
+
+        .indy-chamber {
+            background: url('../assets/images/sites.jpg') no-repeat  -327px -163px;
+            background-size: 820px;
+            border: 7px solid @blue * 2;
+        }
+
+        .cliff-notes {
+            background: url('../assets/images/sites.jpg') no-repeat   -164px -163px;
+            background-size: 820px;
+            border: 7px solid @blue * 2;
+        }
     }
 }
