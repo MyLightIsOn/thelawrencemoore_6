@@ -1,0 +1,579 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	border-style:none;	
+}
+
+img {
+	border-style:none;
+}
+
+
+/*CSS Resets*/
+
+
+
+
+
+
+body {
+	background-image:url(../images/site/content-bg.gif);
+	background-color: #FFF;
+}
+
+
+
+
+
+
+/*Top Banner Styles*/
+
+#topBanner {
+	background-color: #0dafe0;
+	height: 104px;
+	width: 100%;
+}
+
+#topBannerContent {
+	width: 981px;
+	height: 104px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.topBannerAd {
+	margin-top: 8px;
+}
+
+#cartTab {
+	background-image:url(../images/site/cartTab.png);
+	background-repeat: no-repeat;
+	width: 149px;
+	height: 23px;
+	position: relative;
+	top: 82px;
+	float: right;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 11px;
+}
+
+.links {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+
+
+#cartTab a:link {
+		color: #FFF;
+		text-decoration: none;
+		}
+
+
+#cartTab a:visited {
+		color: #FFF;
+		text-decoration: none;
+}
+
+
+#cartTab a:hover {
+		color: #1d5b6e;
+		text-decoration: underline;
+}
+
+
+#cartTab a:active {
+		color: #FFF;
+		text-decoration: none;
+}
+
+
+
+
+
+
+
+/*Header Styles*/
+
+#header {
+	background-color: #4fc7ec;
+	width: 100%;
+	height: 89px;
+	border-top: solid 1px #34a6c8;
+	border-bottom: solid 1px #34a6c8;
+}
+
+
+#headerContent {
+	width: 981px;
+	height: 89px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logo {
+	margin-top: 22px;
+}
+
+
+.searchForm {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+
+.submit {
+	background: url(../images/site/searchOff.png) no-repeat left top;
+	width: 45px;
+    height: 33px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    cursor: pointer;
+	float: right;
+	margin-top: 9px;
+	margin-right: 7px;
+}
+
+.submit:hover {
+	background: url(../images/site/searchOn.png) no-repeat left top;
+	width: 45px;
+    height: 33px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    cursor: pointer;
+	float: right;
+	margin-top: 9px;
+	margin-right: 7px;
+}
+
+#searchBoxBG {
+	width: 318px;
+	height: 49px;
+	float: right;
+	margin-top: 25px;
+	background-image:url(../images/site/searchBG.png);
+}
+
+
+
+
+
+
+/*Navigation Styles*/
+
+#nav {
+	width: 980px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+#nav a:hover {
+	position: relative;
+	top: -60px;
+}
+
+#nav li {
+	list-style: none;
+	display: inline;
+	margin: 0px;
+	float: left;
+}
+
+
+
+
+
+
+/*Content Styles*/
+
+#content {
+	width: 980px;
+	min-height: 200px;
+	background-image: url(../images/site/contentGradient.jpg);
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #FFF;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+
+#content li {
+	list-style: none;
+}
+
+
+#breadCrumbs {
+	height: 30px;
+	width: 100%;
+	font-size: 11px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #666;
+}
+
+
+#breadCrumbs li {
+	display: inline;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.breadCrumbItems {
+	color: #47ADCD;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.breadCrumbItems:hover {
+	color: #31768C;
+}
+
+
+
+
+
+/*Left Column Styles*/
+
+
+#leftColumn 	{
+	width: 200px;
+	min-height: 400px;
+	float: left;
+	margin-right: 10px;
+}
+
+
+
+#resources {
+	width: 172px;
+	min-height: 200px;
+	background-color: #FFF;
+	margin-left: 23px;
+	margin-bottom: 10px;
+}
+
+#resourcesTop {
+	width: 172px;
+	height: 14px;
+	background-image: url(../images/site/leftColumnTop.png);
+}
+
+#resourcesMiddle {
+	width: 172px;
+	min-height: 200px;
+	background-image: url(../images/site/leftColumnMiddle.png);
+	background-repeat: repeat-y;
+	padding-left: 11px;
+	padding-bottom: 5px;
+}
+
+#resourcesBottom {
+	width: 172px;
+	height: 37px;
+	background-image: url(../images/site/leftColumnBottom.png);
+}
+
+.resourcesTitle {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF2D2D;
+	margin-bottom: 8px;
+}
+
+#resources img {
+	margin-left: -5px;
+	margin-bottom: 10px;
+}
+
+#resources a {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #47ADCD;
+}
+
+#resources a:hover {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #31768C;
+}
+
+#resources li {
+	margin-bottom: 10px;
+	line-height: 80%;
+	padding-right: 20px;
+}
+
+
+
+
+/*Polls Styles*/
+
+
+#polls {
+	width: 172px;
+	min-height: 200px;
+	background-color: #FFF;
+	margin-left: 23px;
+	margin-bottom: 10px;
+}
+
+#pollsTop {
+	width: 172px;
+	height: 14px;
+	background-image: url(../images/site/leftColumnTop.png);
+}
+
+#pollsMiddle {
+	width: 172px;
+	min-height: 200px;
+	background-image: url(../images/site/leftColumnMiddle.png);
+	background-repeat: repeat-y;
+	padding-left: 11px;
+	padding-bottom: 5px;
+}
+
+#pollsBottom {
+	width: 172px;
+	height: 37px;
+	background-image: url(../images/site/leftColumnBottom.png);
+}
+
+.pollsTitle {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF2D2D;
+	margin-bottom: 15px;
+	margin-left: 25px;
+}
+
+#polls img {
+	margin-left: -5px;
+	margin-bottom: 10px;
+}
+
+.pollsQuestions {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #666;
+	padding-right: 20px;
+}
+
+#polls form {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #666;
+	padding-right: 20px;
+}
+
+.vote {
+	width: 112px;
+	height: 46px;
+	background-repeat: no-repeat;
+	margin-left: 19px;
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*Middle Column Styles*/
+
+#middleColumn {
+	min-height: 400px;
+	font: 14px/21px Verdana,Arial,sans-serif;
+	padding: 0 10px 0 10px;
+	color: #333333;
+	}
+	
+#middleColumn a {
+	font: 14px/21px Verdana,Arial,sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	color: #47ADCD;
+}
+
+#middleColumn a:hover {
+	font: 14px/21px Verdana,Arial,sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	color: #31768C;
+}	
+	
+td {
+	vertical-align: top;
+	line-height: 20px;
+}	
+	
+
+span.underline {
+	text-decoration: underline;
+}
+
+span.bold {
+	font-weight:bold;
+}
+
+.question {
+	width: 270px;
+}
+
+#feature {
+	background-image: url(../images/site/feature-box-area-bg.png);
+	height: 210px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+
+#featureContent {
+	background-color: #fff;
+	width: 280px;
+	height: 140px;
+	padding: 25px;
+	line-height: 30px;
+}
+
+#featureContent a {
+	font-size: 14px;
+}
+
+#featureContent a:hover {
+	font-size: 14px;
+}
+
+
+.featureTitle {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #FF2D2D;
+	margin-bottom: 15px;
+}
+	
+	
+	
+	
+/*Right Column Styles*/
+
+#rightColumn {
+	width: 172px;
+	min-height: 400px;
+	float: right;
+	margin-right: 20px;
+	margin-left: 10px;
+	text-align: right;
+	}	
+	
+	
+	
+	
+/*Footer Styles*/
+
+#footer {
+	background-color: #fff001;
+	width: 100%;
+	min-height: 200px;
+	border-top: solid 1px #d0c401;
+}
+
+
+#footer table {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+#footer td{
+	width: 280px;
+	text-align: left;
+}
+
+#footer a {
+	color: #757575;
+	text-decoration: none;
+}
+
+#footer p {
+	font-weight: bold;
+}
+
+#footer a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+
+/*Bottom Styles*/
+
+#bottom {
+	background-color: #4fc7ec;
+	width: 100%;
+	height: 40px;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+#bottomContent {
+	width: 981px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ecde01;
+	border-top: 1px solid #cec201;
+	text-align: center;
+	padding-top: 7px;
+}
+
+
+#bottom a {
+	color: #47ADCD;
+	text-decoration: none;
+}
+
+
+#bottom a:hover {
+	color: #31768C;
+	text-decoration: underline;
+}
+
+
+
+
