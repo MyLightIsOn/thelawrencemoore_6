@@ -19,20 +19,34 @@ var myApp = {
         //Animates each nave button
         Velocity(titleElements, {opacity: 1}, {duration: 1000}).then(function(){
             setTimeout(function(){
-                Velocity(navItems[0], {top: 0, bottom: null}, easing)
+                Velocity(navItems[0], {
+                    top: 0,
+                    bottom: null,
+                    opacity: 1
+                }, easing)
             },250);
 
             setTimeout(function(){
-                Velocity(navItems[1], {top: 0, bottom: null}, easing)
-            },450);
-
-            setTimeout(function(){
-                Velocity(navItems[2], {bottom: 0}, easing)
+                Velocity(navItems[1], {
+                    top: 0,
+                    bottom: null,
+                    opacity: 1
+                }, easing)
             },650);
 
             setTimeout(function(){
-                Velocity(navItems[3], {bottom: 0}, easing)
-            },850);
+                Velocity(navItems[2], {
+                    bottom: 0,
+                    opacity: 1
+                }, easing)
+            },1050);
+
+            setTimeout(function(){
+                Velocity(navItems[3], {
+                    bottom: 0,
+                    opacity: 1
+                }, easing)
+            },1450);
         });
 
     },
