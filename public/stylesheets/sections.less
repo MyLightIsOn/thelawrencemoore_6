@@ -48,6 +48,7 @@
     margin-bottom: 15px;
 
     font-size: 2.25em;
+    text-shadow: @shadow-text;
 
     float: left;
 }
@@ -90,11 +91,27 @@
     float: left;
 }
 
+.project-section {
+    width: 100%;
+}
+
 @media @wide {
     .inner-content {
         p {
             max-width: 1020px;
             margin: 0 auto 2%;
         }
+    }
+
+    .project-section {
+        width: 85%;
+        margin: 0 auto 50px;
+    }
+
+    .site-image {
+        width: 177px;
+        height: 177px;
+
+        border-radius: 200px;
     }
 }

@@ -32,6 +32,12 @@
 
         text-align: center;
         font-weight: bold;
+
+        cursor: pointer;
+    }
+
+    .view-process:hover {
+        background-color: @button-blue / 2;
     }
 
     .the-lawrence-moore {
@@ -80,5 +86,58 @@
 
     .section-content {
         background-color: @green;
+    }
+}
+
+@media @wide {
+    #design-section {
+
+        .project-section {
+            div {
+                width: 70%;
+
+                float: left;
+            }
+
+            .view-process {
+                float: left;
+            }
+        }
+
+        .the-lawrence-moore {
+            background: url('../assets/images/sites.jpg') no-repeat -0px 0;
+            background-size: 820px;
+            border: 7px solid @green * 2;
+        }
+
+        .krates {
+            background: url('../assets/images/sites.jpg') no-repeat -164px 0;
+            background-size: 820px;
+            border: 7px solid @green * 2;
+        }
+
+        .hub-tile {
+            background: url('../assets/images/sites.jpg') no-repeat -328px 0;
+            background-size: 820px;
+            border: 7px solid @green * 2;
+        }
+
+        .foxworthy {
+            background: url('../assets/images/sites.jpg') no-repeat -492px 0;
+            background-size: 820px;
+            border: 7px solid @green * 2;
+        }
+
+        .emoe {
+            background: url('../assets/images/sites.jpg') no-repeat -656px 0;
+            background-size: 820px;
+            border: 7px solid @green * 2;
+        }
+
+        .graphic-design {
+            background: url('../assets/images/sites.jpg') no-repeat 0 -163px;
+            background-size: 820px;
+            border: 7px solid @green * 2;
+        }
     }
 }
