@@ -61,8 +61,6 @@
 
             border: 4px solid @white;
             background-color: @gold;
-            /*background: url(../assets/images/about_small.jpg) no-repeat;
-            background-size: cover;*/
         }
 
         .opaque-element:after {
@@ -88,8 +86,6 @@
         .opaque-element {
             border: 4px solid @white;
             background-color: @green;
-            /*background: url(../assets/images/design_small.jpg) no-repeat;
-            background-size: cover;*/
         }
 
         .opaque-element:after {
@@ -115,9 +111,6 @@
         .opaque-element {
             border: 4px solid @white;
             background-color: @blue;
-
-            /*background: url(../assets/images/code_small.jpg) no-repeat;
-            background-size: cover;*/
         }
 
         .opaque-element:after {
@@ -143,8 +136,6 @@
         .opaque-element {
             border: 4px solid @white;
             background-color: @red;
-            /*background: url(../assets/images/contact_small.jpg) no-repeat;
-            background-size: cover;*/
         }
 
         .opaque-element:after {
@@ -249,6 +240,46 @@
 
                 content: '';
             }
+        }
+    }
+}
+
+@media @wide {
+
+    .about {
+
+        .opaque-element {
+            border: 4px solid @gold !important;
+            background: url(../assets/images/about_large.jpg) no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .design {
+
+        .opaque-element {
+            border: 4px solid @green !important;
+            background: url(../assets/images/design_large.jpg) no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .code {
+
+        .opaque-element {
+            border: 4px solid @blue !important;
+            background: url(../assets/images/code_large.jpg) no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .contact {
+
+        .opaque-element {
+            border: 4px solid @red !important;
+            background: url(../assets/images/contact_large.jpg) no-repeat;
+            background-size: cover;
         }
     }
 }
