@@ -57,10 +57,27 @@
         left: 0;
 
         .opaque-element {
+            position: relative;
+
             border: 4px solid @white;
             background-color: @gold;
             /*background: url(../assets/images/about_small.jpg) no-repeat;
             background-size: cover;*/
+        }
+
+        .opaque-element:after {
+            position: relative;
+            top: 50%;
+
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: -40px auto 0;
+
+            background: url(../assets/images/icons.png) no-repeat -207px -104px;
+            background-size: 800px;
+
+            content: '';
         }
     }
 
@@ -73,6 +90,21 @@
             background-color: @green;
             /*background: url(../assets/images/design_small.jpg) no-repeat;
             background-size: cover;*/
+        }
+
+        .opaque-element:after {
+            position: relative;
+            top: 50%;
+
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: -40px auto 0;
+
+            background: url(../assets/images/icons.png) no-repeat -6px -104px;
+            background-size: 800px;
+
+            content: '';
         }
     }
 
@@ -87,6 +119,21 @@
             /*background: url(../assets/images/code_small.jpg) no-repeat;
             background-size: cover;*/
         }
+
+        .opaque-element:after {
+            position: relative;
+            top: 50%;
+
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: -40px auto 0;
+
+            background: url(../assets/images/icons.png) no-repeat -298px -104px;
+            background-size: 800px;
+
+            content: '';
+        }
     }
 
     .contact {
@@ -98,6 +145,21 @@
             background-color: @red;
             /*background: url(../assets/images/contact_small.jpg) no-repeat;
             background-size: cover;*/
+        }
+
+        .opaque-element:after {
+            position: relative;
+            top: 50%;
+
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: -40px auto 0;
+
+            background: url(../assets/images/icons.png) no-repeat -110px -104px;
+            background-size: 800px;
+
+            content: '';
         }
     }
 }
@@ -125,6 +187,67 @@
 
             span {
                 font-size: 1.50em;
+            }
+        }
+    }
+}
+
+@media @short {
+    #bottom-nav {
+
+        .about {
+
+            .opaque-element:after {
+                width: 50px;
+                height: 50px;
+                margin: -25px auto 0;
+
+                background: url(../assets/images/icons.png) no-repeat -96px -46px;
+                background-size: 400px;
+
+                content: '';
+            }
+        }
+
+        .design {
+
+            .opaque-element:after {
+                width: 50px;
+                height: 50px;
+                margin: -25px auto 0;
+
+                background: url(../assets/images/icons.png) no-repeat -3px -46px;
+                background-size: 400px;
+
+                content: '';
+            }
+        }
+
+        .code {
+
+            .opaque-element:after {
+                width: 50px;
+                height: 50px;
+                margin: -25px auto 0;
+
+                background: url(../assets/images/icons.png) no-repeat -143px -46px;
+                background-size: 400px;
+
+                content: '';
+            }
+        }
+
+        .contact {
+
+            .opaque-element:after {
+                width: 50px;
+                height: 50px;
+                margin: -25px auto 0;
+
+                background: url(../assets/images/icons.png) no-repeat -51px -46px;
+                background-size: 400px;
+
+                content: '';
             }
         }
     }
