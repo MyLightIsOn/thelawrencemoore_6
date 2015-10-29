@@ -249,13 +249,19 @@ var myApp = {
             left: 0
         });
 
-        Velocity(closeButton, {
-            left: -100 + '%'
-        });
-
         Velocity(closeSlides, {
             right: 11
         });
+
+        if(window.innerWidth > 1000){
+            Velocity(closeButton, {
+                right: 100 + '%'
+            })
+        } else {
+            Velocity(closeButton, {
+                left: -100 + '%'
+            })
+        }
     },
 
     closeSlideShow: function(){
@@ -271,9 +277,15 @@ var myApp = {
             left: -100 + '%'
         });
 
-        Velocity(closeButton, {
-            left: 30 + '%'
-        });
+        if(window.innerWidth > 1000){
+            Velocity(closeButton, {
+                right: 50
+            })
+        } else {
+            Velocity(closeButton, {
+                left: 20
+            })
+        }
     }
 };
 
