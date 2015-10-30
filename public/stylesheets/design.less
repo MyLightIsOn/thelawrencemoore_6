@@ -1,6 +1,9 @@
 @import "variables.less";
 
 #design-section {
+    .swiper-container {
+        background: url('../assets/images/low_contrast_linen.png') repeat;
+    }
 
     .slide-show {
         width: 100%;
@@ -25,11 +28,13 @@
         max-width: none;
         margin-bottom: 0;
 
-        background-color: @black;
+        background: url('../assets/images/header_bg.png');
 
         p {
             max-width: none;
             padding: 10px;
+
+            font-size: 1.25em;
         }
     }
 
@@ -39,6 +44,11 @@
         background-color: #0000cc;
     }
 
+    .swiper-pagination-bullet {
+        width: 30px;
+        height: 30px;
+        border: 3px solid @white;
+    }
     .view-process {
         display: block;
         border-radius: 100px;
