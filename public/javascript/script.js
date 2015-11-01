@@ -77,7 +77,7 @@ var myApp = {
                     opacity: 1
                 }, easing)
             },1450);
-        }, 3000)
+        }, 2000)
     },
 
     //Puts nav buttons into an array
@@ -280,6 +280,7 @@ var myApp = {
             closeSlides = document.getElementsByClassName('close-slide');
 
         slideShow.style.opacity = 1;
+        slideShow.id = 'open-slide';
 
         Velocity(slideShow, {
             left: 0
@@ -301,18 +302,20 @@ var myApp = {
     },
 
     closeSlideShow: function(){
-        var slideShow = document.getElementsByClassName('slide-show'),
+        var slideShow = document.getElementById('open-slide'),
             closeButton = document.getElementsByClassName('close-area'),
             closeSlides = document.getElementsByClassName('close-slide');
 
-        slideShow.style.opacity = 0;
+        console.log(slideShow);
+        slideShow.removeAttribute('id');
 
         Velocity(closeSlides, {
             right: 100 + '%'
         });
 
         Velocity(slideShow, {
-            left: -100 + '%'
+            left: -100 + '%',
+            opacity: 0
         });
 
         if(window.innerWidth > 1000){
