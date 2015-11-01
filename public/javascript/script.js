@@ -2,12 +2,12 @@ var myApp = {
 
     //Initializes script
     init: function(){
-        myApp.videoLoader();
         myApp.introAnimation();
         myApp.navOpenEventListener();
         myApp.createSlideShow();
         myApp.slideShowOpenEventListner();
         myApp.slideShowCloseEventListner();
+        myApp.videoLoader();
     },
 
     videoLoader: function(){
