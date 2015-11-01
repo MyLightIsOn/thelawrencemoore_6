@@ -198,12 +198,17 @@ var myApp = {
 
     //Creates the slide shows for the Design page
     createSlideShow: function(){
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev'
-        });
+        var slideShowArray = document.getElementsByClassName('swiper-container');
+            for(var i = 0; i < slideShowArray.length; ++i){
+                var slideClass = slideShowArray[i].className.split(' ')[1];
+
+                var swiper = new Swiper('.swiper-container.' + slideClass, {
+                    pagination: '.' + slideClass + ' .swiper-pagination',
+                    paginationClickable: true,
+                    nextButton: '.' + slideClass + ' .swiper-button-next',
+                    prevButton: '.' + slideClass + ' .swiper-button-prev'
+                })
+            }
     },
 
     //Puts view process buttons into an array
