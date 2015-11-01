@@ -39,6 +39,9 @@ var myApp = {
              titleElements = document.getElementById('main-title').children,
              easing =  [ 0.17, 0.67, 0.40, 0.67 ];
 
+        var mainContainer = document.getElementsByClassName('main-container');
+        mainContainer[0].style.display = 'block';
+
         //Animates each nav button
         Velocity(titleElements, {
             opacity: 1
@@ -276,6 +279,8 @@ var myApp = {
             closeButton = document.getElementsByClassName('close-area'),
             closeSlides = document.getElementsByClassName('close-slide');
 
+        slideShow.style.display = "block";
+
         Velocity(slideShow, {
             left: 0
         });
@@ -299,6 +304,8 @@ var myApp = {
         var slideShow = document.getElementsByClassName('slide-show'),
             closeButton = document.getElementsByClassName('close-area'),
             closeSlides = document.getElementsByClassName('close-slide');
+
+        slideShow.style.display = "none";
 
         Velocity(closeSlides, {
             right: 100 + '%'
