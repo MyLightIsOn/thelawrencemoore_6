@@ -14,32 +14,38 @@ var myApp = {
         var videoDiv = document.getElementsByClassName('bg-video');
 
 
+        //Fades the video out, restarts it, then fades it back in .
+        //Had to remove Velocity.js promises and replace them with setTimeouts
+        //It's ugly but promises weren't working in IE...of course!
         if(window.innerWidth > 1000){
-            videoDiv[0].currentTime = 5;
+            videoDiv.currentTime = 5;
             videoDiv[0].playbackRate = 0.75;
             setInterval(function(){
                 Velocity(videoDiv, {
                     opacity: 0
-                }, 5000).then(
-                    function(){
-                        videoDiv[0].currentTime = 5;
-                        Velocity(videoDiv, {
-                            opacity: 1
-                        }, 5000)
-                    }
-                )
+                }, 5000);
+
+                //Fades video back in 5 seconds after fadeout
+                setTimeout(function(){
+                    videoDiv[0].currentTime = 5;
+                    Velocity(videoDiv, {
+                        opacity: 1
+                    }, 5000)
+                }, 5000)
+
             }, 50000);
         }
     },
 
     //Makes the animation when the page loads
     introAnimation: function(){
-         var bottomNav = document.getElementById('bottom-nav'),
-             navItems = bottomNav.children,
-             titleElements = document.getElementById('main-title').children,
-             easing =  [ 0.17, 0.67, 0.40, 0.67 ];
+        var bottomNav = document.getElementById('bottom-nav'),
+            mainContainer = document.getElementsByClassName('main-container'),
+            navItems = bottomNav.children,
+            titleElements = document.getElementById('main-title').children,
+            easing =  [ 0.17, 0.67, 0.40, 0.67 ];
 
-        var mainContainer = document.getElementsByClassName('main-container');
+        //Makes main container visible
         mainContainer[0].style.display = 'block';
 
         //Animates each nav button
@@ -47,6 +53,7 @@ var myApp = {
             opacity: 1
         }, 1000);
 
+        //Cascade of nav animation
         setTimeout(function(){
             setTimeout(function(){
                 Velocity(navItems[0], {
@@ -116,9 +123,11 @@ var myApp = {
         header[0].className += ' close-active';
 
         //Fades in close button
-        Velocity(bottomNav, {height: 100 + '%'}).then(function(){
+        Velocity(bottomNav, {height: 100 + '%'});
+
+        setTimeout(function(){
             Velocity(header, {opacity: 1})
-        });
+        }, 1000);
 
         //Finds the nav button that was pressed and expands it
         //while closing the rest
@@ -274,6 +283,7 @@ var myApp = {
         }
     },
 
+    //Animates the slide show in view
     openSlideShow: function(buttonClicked){
         var slideShow = buttonClicked.nextElementSibling,
             closeButton = document.getElementsByClassName('close-area'),
@@ -301,6 +311,7 @@ var myApp = {
         }
     },
 
+    //Animates the slideshow out of view
     closeSlideShow: function(){
         var slideShow = document.getElementById('open-slide'),
             closeButton = document.getElementsByClassName('close-area'),
