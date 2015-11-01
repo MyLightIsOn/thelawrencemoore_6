@@ -2,11 +2,33 @@ var myApp = {
 
     //Initializes script
     init: function(){
+        myApp.videoLoader();
         myApp.introAnimation();
         myApp.navOpenEventListener();
         myApp.createSlideShow();
         myApp.slideShowOpenEventListner();
         myApp.slideShowCloseEventListner();
+    },
+
+    videoLoader: function(){
+        var videoDiv = document.getElementsByClassName('bg-video');
+
+
+        if(window.innerWidth > 1000){
+            videoDiv[0].currentTime = 5
+            videoDiv[0].playbackRate = 0.75;
+            setInterval(function(){
+                Velocity(videoDiv, {
+                    opacity: 0
+                }, 5000)
+            }, 48000);
+
+            setInterval(function(){
+                Velocity(videoDiv, {
+                    opacity:1
+                }, 5000)
+            }, 62000)
+        }
     },
 
     //Makes the animation when the page loads
