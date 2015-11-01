@@ -15,19 +15,20 @@ var myApp = {
 
 
         if(window.innerWidth > 1000){
-            videoDiv[0].currentTime = 5
+            videoDiv[0].currentTime = 5;
             videoDiv[0].playbackRate = 0.75;
             setInterval(function(){
                 Velocity(videoDiv, {
                     opacity: 0
-                }, 5000)
-            }, 48000);
-
-            setInterval(function(){
-                Velocity(videoDiv, {
-                    opacity:1
-                }, 5000)
-            }, 62000)
+                }, 5000).then(
+                    function(){
+                        videoDiv[0].currentTime = 5;
+                        Velocity(videoDiv, {
+                            opacity: 1
+                        }, 5000)
+                    }
+                )
+            }, 50000);
         }
     },
 
