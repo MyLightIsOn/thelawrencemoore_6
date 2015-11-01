@@ -39,8 +39,10 @@ var myApp = {
              titleElements = document.getElementById('main-title').children,
              easing =  [ 0.17, 0.67, 0.40, 0.67 ];
 
-        //Animates each nave button
-        Velocity(titleElements, {opacity: 1}, {duration: 1000}).then(function(){
+        //Animates each nav button
+        Velocity(titleElements, {
+            opacity: 1
+        }).then(function(){
             setTimeout(function(){
                 Velocity(navItems[0], {
                     top: 0,
