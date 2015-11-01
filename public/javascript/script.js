@@ -279,7 +279,7 @@ var myApp = {
             closeButton = document.getElementsByClassName('close-area'),
             closeSlides = document.getElementsByClassName('close-slide');
 
-        slideShow.style.display = "block";
+        slideShow.style.opacity = 1;
 
         Velocity(slideShow, {
             left: 0
@@ -305,7 +305,7 @@ var myApp = {
             closeButton = document.getElementsByClassName('close-area'),
             closeSlides = document.getElementsByClassName('close-slide');
 
-        slideShow.style.display = "none";
+        slideShow.style.opacity = 0;
 
         Velocity(closeSlides, {
             right: 100 + '%'
