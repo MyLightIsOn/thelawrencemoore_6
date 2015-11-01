@@ -2,6 +2,7 @@ var myApp = {
 
     //Initializes script
     init: function(){
+        console.log("loaded")
         myApp.introAnimation();
         myApp.navOpenEventListener();
         myApp.createSlideShow();
@@ -320,4 +321,8 @@ var myApp = {
     }
 };
 
-myApp.init();
+
+
+window.addEventListener('load',
+    myApp.init()
+);
