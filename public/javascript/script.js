@@ -2,7 +2,6 @@ var myApp = {
 
     //Initializes script
     init: function(){
-        console.log("loaded")
         myApp.introAnimation();
         myApp.navOpenEventListener();
         myApp.createSlideShow();
@@ -75,7 +74,7 @@ var myApp = {
                     opacity: 1
                 }, easing)
             },1450);
-        }, 1000)
+        }, 3000)
     },
 
     //Puts nav buttons into an array
