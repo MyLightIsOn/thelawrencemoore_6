@@ -7,7 +7,10 @@ var myApp = {
         myApp.createSlideShow();
         myApp.slideShowOpenEventListner();
         myApp.slideShowCloseEventListner();
-        myApp.videoLoader();
+
+        setTimeout(function(){
+            myApp.videoLoader();
+        }, 2000)
     },
 
     videoLoader: function(){
@@ -40,9 +43,7 @@ var myApp = {
              easing =  [ 0.17, 0.67, 0.40, 0.67 ];
 
         //Animates each nav button
-        Velocity(titleElements, {
-            opacity: 1
-        }).then(function(){
+        Velocity(titleElements, {opacity: 1}, {duration: 1000}).then(function(){
             setTimeout(function(){
                 Velocity(navItems[0], {
                     top: 0,
