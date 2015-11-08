@@ -8,6 +8,30 @@ var myApp = {
         myApp.slideShowOpenEventListner();
         myApp.slideShowCloseEventListner();
         myApp.videoLoader();
+        myApp.delayLoader();
+    },
+
+    delayLoader: function(){
+        var slideImages = document.getElementsByClassName('slide-image'),
+            siteImages = document.getElementsByClassName('site-image'),
+            weaponIcon = document.getElementsByClassName('weapons-icon'),
+            lightBulbs = document.getElementsByClassName('light-bulb'),
+            pieChart = document.getElementsByClassName('pie-chart');
+
+        myApp.changeDisplay(slideImages);
+        myApp.changeDisplay(siteImages);
+        myApp.changeDisplay(weaponIcon);
+        myApp.changeDisplay(lightBulbs);
+        myApp.changeDisplay(pieChart);
+    },
+
+    changeDisplay: function(array){
+
+        setTimeout(function(){
+            for(var i = 0; i < array.length; ++i){
+                array[i].style.display = 'block'
+            }
+        }, 6000);
     },
 
     videoLoader: function(){
