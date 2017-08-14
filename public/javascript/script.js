@@ -7,7 +7,7 @@ var myApp = {
         myApp.createSlideShow();
         myApp.slideShowOpenEventListner();
         myApp.slideShowCloseEventListner();
-        myApp.videoLoader();
+        //myApp.videoLoader();
         myApp.delayLoader();
     },
 
