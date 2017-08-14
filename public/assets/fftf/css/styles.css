@@ -1,0 +1,75 @@
+#container {
+    vertical-align: top;
+    display: flex;
+    align-items: center;
+}
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 9;
+    opacity: 0.5;
+}
+
+#left {
+    width: 50%;
+}
+
+#right {
+    width: 50%;
+}
+
+#title-content {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+
+#title-content p {
+    font-weight: bold;
+}
+
+#title-content img {
+    width: 74%;
+}
+
+#main-title {
+    font-weight: bold;
+    font-size: 70px;
+    display: block;
+    margin: 30px auto 20px ;
+}
+
+.title-effects {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: normal 72px/normal "Passero One", Helvetica, sans-serif;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.main-subtitle {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.secondary-subtitle {
+    font-size: 25px;
+}
